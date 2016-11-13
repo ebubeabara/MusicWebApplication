@@ -1,0 +1,244 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="row" style="text-align: center;">
+    <div class="col-md-8">
+        <div class="row">
+            <h2>Hub for your old school classics</h2>
+        </div>
+
+
+        <div style="text-align:center" class="row">
+
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <h3 style="color:cadetblue" class="ebubefont">Portfolio</h3>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <a>
+                            <center><img src="~/Content/Carousel slider/styles/theme/exampleImages/1.jpg" alt="song one" style="max-width:50%; max-height:50%" /></center>
+                            <h4>song one</h4>
+                        </a>
+                    </div>
+
+                    <div class="item">
+                        <a>
+                            <center><img src="~/Content/Carousel slider/styles/theme/exampleImages/2.jpg" alt="song two" style="max-width:50%; max-height:50%" /></center>
+                            <h4>song two</h4>
+                        </a>
+                    </div>
+
+                    <div class="item">
+                        <a>
+                            <center><img src="~/Content/Carousel slider/styles/theme/exampleImages/3.jpg" alt="song three" style="max-width:50%; max-height:50%" /></center>
+                            <h4>song three</h4>
+                        </a>
+                    </div>
+
+                    <div class="item">
+                        <a>
+                            <center><img src="~/Content/Carousel slider/styles/theme/exampleImages/4.jpg" alt="song four" style="max-width:50%; max-height:50%" /></center>
+                            <h4>song four</h4>
+                        </a>
+                    </div>
+
+                    <div class="item">
+                        <a>
+                            <center><img src="~/Content/Carousel slider/styles/theme/exampleImages/5.jpg" alt="song five" style="max-width:50%; max-height:50%" /></center>
+                            <h4>song five</h4>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+        </div>        
+    </div>
+
+    <div class="col-md-4" style="text-align: center;">
+        <div class="row">
+            <h2>Tracks</h2>
+        </div>
+        <div class="row">
+            <div id="search-form">
+                <form class="form-container" action="">
+                    <input type="text" class="search-field" value="" placeholder="Search for track by artist..." />
+                    <div class="submit-container">
+                        <input type="submit" value="" class="submit" />
+                    </div>
+                </form>
+                <div class="popup">
+                    <p>Please fill out this field.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <a class="buttonUpdate" @Html.ActionLink("Upload", "Create", "Songs")  </a>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <a class="buttonAll" @Html.ActionLink("All", "Index", "Songs")  </a>
+        </div>
+
+
+
+        @*<div class="row">
+            <input class="button" type="button" value="Upload" />
+        </div>
+        <br />
+        <div class="row">
+            <input class="button" type="button" value="All" />
+        </div>*@
+    </div>
+</div>
+
+@* SUPPORT CODE BY EBUBE - ALL USEFUL *@
+
+
+<style>
+    .buttonUpdate {
+        border-top: 1px solid #97f7cf;
+        background: #1c2036;
+        background: -webkit-gradient(linear, left top, left bottom, from(#7bd45d), to(#1c2036));
+        background: -webkit-linear-gradient(top, #7bd45d, #1c2036);
+        background: -moz-linear-gradient(top, #7bd45d, #1c2036);
+        background: -ms-linear-gradient(top, #7bd45d, #1c2036);
+        background: -o-linear-gradient(top, #7bd45d, #1c2036);
+        padding: 11.5px 23px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+        -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+        -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+        box-shadow: rgba(0,0,0,1) 0 1px 0;
+        text-shadow: rgba(0,0,0,.4) 0 1px 0;
+        color: white;
+        font-size: 24px;
+        font-family: Georgia, serif;
+        text-decoration: none;
+        vertical-align: middle;
+        /*added by ebube*/
+        width: 75%;
+        height: 75%;
+        /*added by ebube*/ 
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .buttonUpdate:hover {
+        border-top-color: #3c9647;
+        background: #3c9647;
+        color: #000000;
+    }
+    .buttonUpdate:active {
+        border-top-color: #2e6e4f;
+        background: #2e6e4f;
+    }
+
+
+
+    .buttonAll {
+        border-top: 1px solid #97f7cf;
+        background: #1c2036;
+        background: -webkit-gradient(linear, left top, left bottom, from(#7bd45d), to(#1c2036));
+        background: -webkit-linear-gradient(top, #7bd45d, #1c2036);
+        background: -moz-linear-gradient(top, #7bd45d, #1c2036);
+        background: -ms-linear-gradient(top, #7bd45d, #1c2036);
+        background: -o-linear-gradient(top, #7bd45d, #1c2036);
+        padding: 11.5px 23px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+        -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+        -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+        box-shadow: rgba(0,0,0,1) 0 1px 0;
+        text-shadow: rgba(0,0,0,.4) 0 1px 0;
+        color: white;
+        font-size: 24px;
+        font-family: Georgia, serif;
+        text-decoration: none;
+        vertical-align: middle;
+        /*added by ebube*/
+        width: 75%;
+        height: 75%;
+        /*added by ebube*/ 
+        padding-left: 74px;
+        padding-right: 74px;
+    }
+    .buttonAll:hover {
+        border-top-color: #3c9647;
+        background: #3c9647;
+        color: #000000;
+    }
+    .buttonAll:active {
+        border-top-color: #2e6e4f;
+        background: #2e6e4f;
+    }
+
+
+</style>
+
+
+
+
+<style>
+    
+    .button {
+        border-top: 1px solid #97f7cf;
+        background: #1c2036;
+        background: -webkit-gradient(linear, left top, left bottom, from(#7bd45d), to(#1c2036));
+        background: -webkit-linear-gradient(top, #7bd45d, #1c2036);
+        background: -moz-linear-gradient(top, #7bd45d, #1c2036);
+        background: -ms-linear-gradient(top, #7bd45d, #1c2036);
+        background: -o-linear-gradient(top, #7bd45d, #1c2036);
+        padding: 11.5px 23px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+        -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+        -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+        box-shadow: rgba(0,0,0,1) 0 1px 0;
+        text-shadow: rgba(0,0,0,.4) 0 1px 0;
+        color: white;
+        font-size: 24px;
+        font-family: Georgia, serif;
+        text-decoration: none;
+        vertical-align: middle;
+        /*added by ebube*/
+        width: 75%;
+        height: 75%;
+        /*added by ebube*/ 
+    }
+    .button:hover {
+        border-top-color: #3c9647;
+        background: #3c9647;
+        /*color: #ccc;*/
+        color: #000000;
+    }
+    .button:active {
+        border-top-color: #2e6e4f;
+        background: #2e6e4f;
+    }
+
+</style>
